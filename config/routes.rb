@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/") and a method to handle this request (hello)
   # expect a home method in the pages controller
   root "pages#home"
+  # add the route for the about page. Need a get request for the page
+  # since this is a static about page, we can use the pages controller to add an about action
+  get 'about', to: 'pages#about'
 end
